@@ -1,0 +1,181 @@
+/* advanced-styles.css */
+
+/* App container styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+/* Content container styles */
+.content-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 20%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+/* Main content styles */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.main-content.expanded {
+  margin-left: 0;
+}
+
+/* MenuBar styles */
+.menu-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+}
+
+.menu-bar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-bar ul li {
+  margin-left: 10px;
+}
+
+.menu-bar ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.menu-bar ul li a:hover,
+.menu-bar ul li a.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.menu-bar .toggle-sidebar-btn {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.menu-bar.open .toggle-sidebar-btn {
+  display: block;
+}
+
+/* Add media query for responsive styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 0;
+    padding: 0;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .sidebar.open {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .menu-bar ul {
+    display: none;
+  }
+
+  .menu-bar .toggle-sidebar-btn {
+    display: block;
+  }
+
+  .main-content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease-in-out;
+  }
+
+  .main-content.expanded {
+    margin-left: 0;
+  }
+}
+
+/* advanced-styles.css */
+
+/* ... (existing styles) */
+
+/* Login page styles */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-container .form-group {
+  margin-bottom: 10px;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #555;
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
